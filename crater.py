@@ -7,6 +7,7 @@ Created on Wed Nov  8 19:43:21 2023
 """
 import numpy as np
 import cratersizedistr as cs
+# import cratersizedistr as cs
 
 class Crater:
     def __init__(self, radius, position_x, position_y, visible):
@@ -17,14 +18,14 @@ class Crater:
         
 
 class CraterFactory:
-    def create_crater(self, range):
+    def CreateCrater(self, range):
         """
         
 
         Returns A new crater
         -------
         TYPE
-            Generates a new crater based on size frequency distribution and random position
+            Generates a new asteroid based on size frequency distribution and random position
 
         """
         radius = cs.random_crater_size()

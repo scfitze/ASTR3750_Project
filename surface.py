@@ -22,7 +22,7 @@ class Surface:
         #TODO Check for wiped out craters
         self.PlotSurface()
     
-    def Add_Crater(self):
+    def AddCrater(self):
         # Create crater
         crater = self.crater_factory.CreateCrater(self.squared_size)
         # TODO: check for collisions
@@ -34,11 +34,11 @@ class Surface:
         self.crater_map[crater.position_x][crater.position_y] = 1
         self.num_craters += 1
         
-    def print_crater_map(self):
+    def PrintCraterMap(self):
         for i, row in enumerate(self.crater_map):
             print(self.crater_map[i])
     
-    def print_crater_lst(self):
+    def PrintCraterList(self):
         print(self.crater_lst)
         
     def PlotSurface(self):
