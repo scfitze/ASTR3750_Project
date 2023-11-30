@@ -25,14 +25,14 @@ class Project:
         plt.show()
         
     def RunSim(self):
-        for i in range(10):
+        for i in range(200):
             self.surface.TakeTimeStep()
             self.crater_frequency.append(self.surface.num_craters)
             self.timesteps.append(i)
         self.PlotCraterFrequency()
-        print(self.surface.crater_lst)
+        # print(self.surface.crater_lst)
             
             
 # Test sim            
-p = Project(s.Surface(500))
+p = Project(s.Surface(100))
 p.RunSim()
